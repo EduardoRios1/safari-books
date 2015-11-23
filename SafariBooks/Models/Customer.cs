@@ -9,23 +9,24 @@ namespace SafariBooks.Models
 {
     public class Customer : IdentityUser
     {
-        // This comment is to test GitHub because we almost have a working repo
-        // **** ADD Data annotations for required and ADD regular expressions for email and Display names ****
-        public string FName { get; set; }
+      public String CustomerID { get; set; }
+
+      // **** ADD Data annotations for required and ADD regular expressions for email and Display names ****
+      public String FName { get; set; }
 
       [StringLength(1, ErrorMessage = "Please use the first letter of your middle name.")]
-        public string MI { get; set; }  
-        public string LName { get; set; }
+      public String MI{ get; set; }
+      public String LName { get; set; }
 
-        public string StreetAddress { get; set; }
+      public String StreetAddress { get; set; }
 
-        public string City { get; set; }
+      public String City { get; set; }
 
-        [DataType(DataType.PostalCode)]
-        public string Zip { get; set; }
+      [DataType(DataType.PostalCode)]
+      public String Zip { get; set; }
 
-        //[CreditCard] ???
-        public virtual List<CreditCard> CreditCards { get; set; }
+      //[CreditCard] data annotation?
+      public virtual List<CreditCard> CreditCards { get; set; }
 
     }
 }

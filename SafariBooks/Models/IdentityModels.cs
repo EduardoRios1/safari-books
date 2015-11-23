@@ -7,9 +7,16 @@ using Microsoft.AspNet.Identity.EntityFramework;
 namespace SafariBooks.Models
 {
     // You can add profile data for the user by adding more properties to your ApplicationUser class, please visit http://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
-    public class ApplicationUser : IdentityUser
+    public class AppUser : IdentityUser
     {
-        public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
+     
+        //TODO: Put any additional fields that you need for your user here
+        //For instance
+        public string FName { get; set; }
+        
+        
+        //This method allows you to create a new user
+        public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<AppUser> manager)
         {
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType
             var userIdentity = await manager.CreateIdentityAsync(this, DefaultAuthenticationTypes.ApplicationCookie);
@@ -18,16 +25,25 @@ namespace SafariBooks.Models
         }
     }
 
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
+    //TODO: Here's your db context for the project.  All of your db sets should go in here
+    public class AppDbContext : IdentityDbContext<AppUser>
     {
-        public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+        //TODO:  Add dbsets here, for instance there's one for books
+        //Remember, Identity adds a db set for users, so you shouldn't add that one - you will get an error
+        public DbSet<Book> Books { get; set; }
+        
+        
+        //TODO: Make sure that your connection string name is correct here.
+        public AppDbContext()
+            : base("MyDBConnection", throwIfV1Schema: false)
         {
         }
 
-        public static ApplicationDbContext Create()
+        public static AppDbContext Create()
         {
-            return new ApplicationDbContext();
+            return new AppDbContext();
         }
+
+        public System.Data.Entity.DbSet<SafariBooks.Models.AppRole> AppRoles { get; set; }
     }
 }

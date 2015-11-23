@@ -53,6 +53,9 @@
     </div>
     <div class="col-md-4">
         <section id="socialLoginForm">
+            <!--There is an error under this line and we need to get it fixed soon;
+                to try to fix it we MANUALLY created an ExternalLoginListViewModel, but
+                we are not sure if this is right -->
             @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
         </section>
     </div>
