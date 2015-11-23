@@ -9,6 +9,7 @@ namespace SafariBooks.Models
 {
     public class Customer : IdentityUser
     {
+        // This comment is to test GitHub because we almost have a working repo
         // **** ADD Data annotations for required and ADD regular expressions for email and Display names ****
         public string FName { get; set; }
 
