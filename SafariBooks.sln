@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SafariBooks", "SafariBooks\SafariBooks.csproj", "{52D2A0AE-1D05-408D-8B72-286FE4324F9F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishScripts", "{D8EF4FD4-4BE0-40C5-B74F-5F458582911F}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\AzureWebsitePublishModule.psm1 = PublishScripts\AzureWebsitePublishModule.psm1
+		PublishScripts\Publish-WebApplicationWebsite.ps1 = PublishScripts\Publish-WebApplicationWebsite.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configurations", "Configurations", "{4409039D-A1B9-4E3C-B3EA-D51FA88FBA6C}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Configurations\SafariBooks-WAWS-dev.json = PublishScripts\Configurations\SafariBooks-WAWS-dev.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{52D2A0AE-1D05-408D-8B72-286FE4324F9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52D2A0AE-1D05-408D-8B72-286FE4324F9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52D2A0AE-1D05-408D-8B72-286FE4324F9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52D2A0AE-1D05-408D-8B72-286FE4324F9F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4409039D-A1B9-4E3C-B3EA-D51FA88FBA6C} = {D8EF4FD4-4BE0-40C5-B74F-5F458582911F}
+	EndGlobalSection
+EndGlobal
