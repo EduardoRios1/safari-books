@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
 
-namespace SafariBooks.Models
+namespace SafariBooks.Models.ViewModels
 {
     public class IndexViewModel
     {

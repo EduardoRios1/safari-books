@@ -7,6 +7,7 @@ using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
+using SafariBooks.Models.ViewModels;
 
 //TODO: Change this reference to your project name
 using SafariBooks.Models;

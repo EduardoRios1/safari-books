@@ -14,7 +14,7 @@ using SafariBooks.Models;
 
 namespace SafariBooks
 {
-   
+
     // Configure the application user manager used in this application. UserManager is defined in ASP.NET Identity and is used by the application.
     public class AppUserManager : UserManager<AppUser>
     {
@@ -25,7 +25,7 @@ namespace SafariBooks
 
 
         //TODO:  Change any settings related to your user password rules, etc.
-        public static AppUserManager Create(IdentityFactoryOptions<AppUserManager> options, IOwinContext context) 
+        public static AppUserManager Create(IdentityFactoryOptions<AppUserManager> options, IOwinContext context)
         {
             var manager = new AppUserManager(new UserStore<AppUser>(context.Get<AppDbContext>()));
             // Configure validation logic for usernames
@@ -47,7 +47,7 @@ namespace SafariBooks
                 RequireUppercase = true,
             };
 
-            
+
             return manager;
         }
     }

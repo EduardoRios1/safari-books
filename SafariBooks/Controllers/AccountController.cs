@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using SafariBooks.Models;
+using SafariBooks.Models.ViewModels;
 
 
 namespace SafariBooks.Controllers
@@ -23,7 +24,7 @@ namespace SafariBooks.Controllers
         {
         }
 
-        public AccountController(AppUserManager userManager, ApplicationSignInManager signInManager )
+        public AccountController(AppUserManager userManager, ApplicationSignInManager signInManager)
         {
             UserManager = userManager;
             SignInManager = signInManager;
@@ -35,9 +36,9 @@ namespace SafariBooks.Controllers
             {
                 return _signInManager ?? HttpContext.GetOwinContext().Get<ApplicationSignInManager>();
             }
-            private set 
-            { 
-                _signInManager = value; 
+            private set
+            {
+                _signInManager = value;
             }
         }
 
@@ -93,7 +94,7 @@ namespace SafariBooks.Controllers
             }
         }
 
-       
+
         //
         // GET: /Account/Register
         [AllowAnonymous]
@@ -123,8 +124,8 @@ namespace SafariBooks.Controllers
 
                 if (result.Succeeded)
                 {
-                    await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
-                    
+                    await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
+
                     // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link
                     // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);

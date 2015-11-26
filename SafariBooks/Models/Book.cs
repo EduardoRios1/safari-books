@@ -8,6 +8,7 @@ namespace SafariBooks.Models
 {
     public class Book
     {  
+        //Created Crud based off this
         [Key]
         public String UniqueNumber { get; set; }
         public String Title { get; set; }

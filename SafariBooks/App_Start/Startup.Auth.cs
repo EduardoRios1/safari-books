@@ -19,7 +19,7 @@ namespace SafariBooks
             app.CreatePerOwinContext(AppDbContext.Create);
             app.CreatePerOwinContext<AppUserManager>(AppUserManager.Create);
             app.CreatePerOwinContext<ApplicationSignInManager>(ApplicationSignInManager.Create);
-            
+
             //TODO: Make sure there is some code here to create a role manager for each user
             app.CreatePerOwinContext<AppRoleManager>(AppRoleManager.Create);
 
@@ -40,10 +40,10 @@ namespace SafariBooks
                         validateInterval: TimeSpan.FromMinutes(30),
                         regenerateIdentity: (manager, user) => user.GenerateUserIdentityAsync(manager))
                 }
-            });            
+            });
             app.UseExternalSignInCookie(DefaultAuthenticationTypes.ExternalCookie);
 
-           
+
         }
     }
 }

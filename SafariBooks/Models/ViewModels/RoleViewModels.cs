@@ -5,7 +5,7 @@ using System.Web;
 using System.ComponentModel.DataAnnotations;
 
 
-namespace SafariBooks.Models
+namespace SafariBooks.Models.ViewModels
 {
     public class RoleEditModel
     {

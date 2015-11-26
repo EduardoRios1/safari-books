@@ -13,7 +13,7 @@ using System.Web.Mvc;
 //TODO: Add this whole class
 namespace SafariBooks.Models
 {
-    public class AppRole: IdentityRole
+    public class AppRole : IdentityRole
     {
         public AppRole() : base() { }
 
