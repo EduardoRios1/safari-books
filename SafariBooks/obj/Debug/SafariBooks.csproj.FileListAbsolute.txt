@@ -163,3 +163,7 @@ C:\Users\Azaam\Documents\University of Texas Undergrad\Junior Year\MIS333K\safar
 C:\Users\Azaam\Documents\University of Texas Undergrad\Junior Year\MIS333K\safari-books\SafariBooks\obj\Debug\SafariBooks.csprojResolveAssemblyReference.cache
 C:\Users\Azaam\Documents\University of Texas Undergrad\Junior Year\MIS333K\safari-books\SafariBooks\obj\Debug\SafariBooks.dll
 C:\Users\Azaam\Documents\University of Texas Undergrad\Junior Year\MIS333K\safari-books\SafariBooks\obj\Debug\SafariBooks.pdb
+C:\Users\Azaam\Documents\University of Texas Undergrad\Junior Year\MIS333K\safari-books\SafariBooks\obj\Debug\SafariBooks.Migrations.InitialCreate.resources
+C:\Users\Azaam\Documents\University of Texas Undergrad\Junior Year\MIS333K\safari-books\SafariBooks\obj\Debug\SafariBooks.csproj.GenerateResource.Cache
+C:\Users\Azaam\Documents\University of Texas Undergrad\Junior Year\MIS333K\safari-books\SafariBooks\obj\Debug\SafariBooks.Migrations.ChangestotheModels.resources
+C:\Users\Azaam\Documents\University of Texas Undergrad\Junior Year\MIS333K\safari-books\SafariBooks\obj\Debug\SafariBooks.Migrations.ChangeBooksandAuthors.resources

@@ -9,6 +9,7 @@ namespace SafariBooks.Models
     public class CreditCard
     {
         [Key]
+        [Required]
         public string Digits { get; set; }
 
         public enum Type

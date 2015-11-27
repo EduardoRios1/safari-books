@@ -17,7 +17,7 @@ namespace SafariBooks.Utilities
                         select a;
             List<Author> allAuthors = query.ToList();
 
-            SelectList list = new SelectList(allAuthors, "AuthorID", "Name");
+            SelectList list = new SelectList(allAuthors, "AuthorID", "FullName");
 
             return list;
 
@@ -32,7 +32,7 @@ namespace SafariBooks.Utilities
 
             allAuthors.Insert(0, new Author { AuthorID = -1, FName = "All" ,LName = "Authors"});
 
-            SelectList list = new SelectList(allAuthors, "AuthorID", "Name");
+            SelectList list = new SelectList(allAuthors, "AuthorID", "FullName");
 
             return list;
         }

@@ -9,6 +9,7 @@ namespace SafariBooks.Models
 {
     public class Customer : IdentityUser
     {
+        [Required]
       public String CustomerID { get; set; }
 
       // **** ADD Data annotations for required and ADD regular expressions for email and Display names ****

@@ -17,6 +17,8 @@ namespace SafariBooks.Models.ViewModels
 
         public Author Author { get; set; }
 
+        public Genre Genre { get; set; }
+
         [Required]
         public virtual List<Genre> BookGenres { get; set; }
 

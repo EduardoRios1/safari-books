@@ -13,6 +13,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace SafariBooks.Controllers
 {
+    //Look at Longhorn Music as a template
     //Made a Book Controller
     public class BooksController : Controller
     {
@@ -24,10 +25,11 @@ namespace SafariBooks.Controllers
         public ActionResult Index()
         {
             return View(db.Books.ToList());
+            
         }
 
         // GET: Books/Details/5
-        public ActionResult Details(string id)
+        public ActionResult Details(int id)
         {
             if (id == null)
             {
@@ -46,28 +48,57 @@ namespace SafariBooks.Controllers
         {
             BookCreateViewModel newBook = new BookCreateViewModel();
             ViewBag.AllAuthors = UpdateAuthors.GetAllAuthors(db);
+            ViewBag.AllGenres = UpdateGenres.GetAllGenres(db);
             return View(newBook);
         }
 
         // POST: Books/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        //Azaam: I made based this Create off of Longhorn Music. Our Genre is different because we can only have one Genre, just like Author
+        //Azaam: For some reason the UniqueNumber is coming in null, even though it is in the View already
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "UniqueNumber,Title,Price,PublicationDate")] Book book)
+        public ActionResult Create([Bind(Include = "UniqueNumber,Title,Price,PublicationDate,SelectedGenres,SelectedArtist")] BookCreateViewModel newBook)
         {
-            if (ModelState.IsValid)
-            {
-                db.Books.Add(book);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
+            //add artest based on id
+            newBook.Author = db.Authors.FirstOrDefault(a => a.AuthorID == newBook.SelectedAuthor);
+            newBook.Genre = db.Genres.FirstOrDefault(a => a.GenreID == newBook.SelectedGenre);
 
-            return View(book);
+            //create a book based on the view model
+            Book bookToAdd = newBook.ToDomainModel();
+            bookToAdd.UniqueNumber = newBook.UniqueNumber;
+
+            //System.Diagnostics.Debug.WriteLine(newBook.UniqueNumber);
+
+            //create a validation context to validate the song
+            //ValidationContext vcx = new ValidationContext(bookToAdd);
+
+            //validate the song follows all the rules
+            //This is not needed because in her model, there were multiple Genres to Validate
+            //IEnumerable<ValidationResult> validResults = bookToAdd.Validate(vcx);
+
+            //if (validResults.Count() == 0)
+            //{
+            db.Books.Add(bookToAdd);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+                
+            //}
+            //else  //there are validation results so we need to add them to the view model errors
+            //{
+            //    foreach (ValidationResult vResult in validResults)
+            //    {
+            //        ModelState.AddModelError("", vResult.ErrorMessage);
+            //    }
+            //}
+        
         }
 
         // GET: Books/Edit/5
-        public ActionResult Edit(string id)
+        // Azaam: For some reason, the Genre ID is going Null
+        //Azaam: To see more about an error, click View Details on the error, then expand the error and Inner Exception.
+        public ActionResult Edit(int? id)
         {
             if (id == null)
             {
@@ -78,7 +109,13 @@ namespace SafariBooks.Controllers
             {
                 return HttpNotFound();
             }
-            return View(book);
+
+            //Converts a book to a BookCreate View Model
+            BookCreateViewModel bookToView = book.ToViewModel();
+            //Grabs a ViewBag
+            ViewBag.AllGenres = UpdateGenres.GetAllGenres(db);
+            ViewBag.AllArtists = UpdateAuthors.GetAllAuthors(db);
+            return View(bookToView);
         }
 
         // POST: Books/Edit/5
@@ -86,19 +123,26 @@ namespace SafariBooks.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "UniqueNumber,Title,Price,PublicationDate")] Book book)
+        public ActionResult Edit([Bind(Include = "UniqueNumber,Title,Price,PublicationDate")] BookCreateViewModel editedBook)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(book).State = EntityState.Modified;
+                Book originalBook = db.Books.Find(editedBook.UniqueNumber);
+
+                UpdateGenres.AddOrUpdateBookGenre(db, originalBook, db.Genres.FirstOrDefault(a => a.GenreID == editedBook.SelectedGenre));
+                UpdateAuthors.AddOrUpdateAuthor(db, originalBook, db.Authors.FirstOrDefault(a => a.AuthorID == editedBook.SelectedAuthor));
+                db.Entry(originalBook).CurrentValues.SetValues(editedBook);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(book);
+
+            ViewBag.AllGenres = UpdateGenres.GetAllGenres(db);
+            ViewBag.AllAuthors = UpdateAuthors.GetAllAuthors(db);
+            return View(editedBook);
         }
 
         // GET: Books/Delete/5
-        public ActionResult Delete(string id)
+        public ActionResult Delete(int id)
         {
             if (id == null)
             {
@@ -115,7 +159,7 @@ namespace SafariBooks.Controllers
         // POST: Books/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(string id)
+        public ActionResult DeleteConfirmed(int id)
         {
             Book book = db.Books.Find(id);
             db.Books.Remove(book);

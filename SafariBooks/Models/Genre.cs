@@ -18,6 +18,7 @@ namespace SafariBooks.Models
         public string Description { get; set; }
 
         public List<Author> Authors { get; set;}
+
         public List<Book> Books { get; set; }
     }
 }
