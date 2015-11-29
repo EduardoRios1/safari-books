@@ -10,7 +10,6 @@ namespace SafariBooks.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "SafariBooks.Models.AppDbContext";
         }
 
         protected override void Seed(SafariBooks.Models.AppDbContext context)

@@ -167,17 +167,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201511260756007_InitialCreate.cs" />
-    <Compile Include="Migrations\201511260756007_InitialCreate.Designer.cs">
-      <DependentUpon>201511260756007_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201511262206364_Changes to the Models.cs" />
-    <Compile Include="Migrations\201511262206364_Changes to the Models.Designer.cs">
-      <DependentUpon>201511262206364_Changes to the Models.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201511270529161_Change Books and Authors.cs" />
-    <Compile Include="Migrations\201511270529161_Change Books and Authors.Designer.cs">
-      <DependentUpon>201511270529161_Change Books and Authors.cs</DependentUpon>
+    <Compile Include="Migrations\201511282326288_AftermathOfDeletedMigrations.cs" />
+    <Compile Include="Migrations\201511282326288_AftermathOfDeletedMigrations.Designer.cs">
+      <DependentUpon>201511282326288_AftermathOfDeletedMigrations.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -196,6 +188,7 @@
     <Compile Include="Startup.cs" />
     <Compile Include="Utilities\UpdateAuthors.cs" />
     <Compile Include="Utilities\UpdateGenres.cs" />
+    <Compile Include="Views\CreditCardController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -279,6 +272,12 @@
     <Content Include="Views\Genres\Details.cshtml" />
     <Content Include="Views\Genres\Edit.cshtml" />
     <Content Include="Views\Genres\Index.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\CreditCard\Create.cshtml" />
+    <Content Include="Views\CreditCard\Delete.cshtml" />
+    <Content Include="Views\CreditCard\Details.cshtml" />
+    <Content Include="Views\CreditCard\Edit.cshtml" />
+    <Content Include="Views\CreditCard\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -288,14 +287,8 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201511260756007_InitialCreate.resx">
-      <DependentUpon>201511260756007_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201511262206364_Changes to the Models.resx">
-      <DependentUpon>201511262206364_Changes to the Models.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201511270529161_Change Books and Authors.resx">
-      <DependentUpon>201511270529161_Change Books and Authors.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201511282326288_AftermathOfDeletedMigrations.resx">
+      <DependentUpon>201511282326288_AftermathOfDeletedMigrations.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
