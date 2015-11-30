@@ -222,3 +222,5 @@ C:\Users\Eduardo\Documents\GitHub\safari-books\SafariBooks\obj\Debug\SafariBooks
 C:\Users\Eduardo\Documents\GitHub\safari-books\SafariBooks\obj\Debug\SafariBooks.csproj.GenerateResource.Cache
 C:\Users\Azaam\Documents\University of Texas Undergrad\Junior Year\MIS333K\safari-books\SafariBooks\obj\Debug\SafariBooks.Migrations.AftermathOfDeletedMigrations.resources
 C:\Users\Azaam\Documents\University of Texas Undergrad\Junior Year\MIS333K\safari-books\SafariBooks\obj\Debug\SafariBooks.csprojResolveAssemblyReference.cache
+C:\Users\Kavina\Documents\GitHub\safari-books\SafariBooks\obj\Debug\SafariBooks.Migrations.BookID.resources
+C:\Users\Kavina\Documents\GitHub\safari-books\SafariBooks\obj\Debug\SafariBooks.csproj.GenerateResource.Cache
