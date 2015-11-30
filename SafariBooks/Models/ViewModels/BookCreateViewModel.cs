@@ -10,6 +10,7 @@ namespace SafariBooks.Models.ViewModels
     public class BookCreateViewModel
     {
         [Key]
+        [Required]
         public int UniqueNumber { get; set; }
 
         [Required]

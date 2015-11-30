@@ -278,6 +278,7 @@
     <Content Include="Views\CreditCard\Details.cshtml" />
     <Content Include="Views\CreditCard\Edit.cshtml" />
     <Content Include="Views\CreditCard\Index.cshtml" />
+    <Content Include="Views\Books\TestView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

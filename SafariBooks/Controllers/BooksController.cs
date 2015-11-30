@@ -28,6 +28,14 @@ namespace SafariBooks.Controllers
             
         }
 
+        // GET: TestView
+        public ActionResult TestView(BookCreateViewModel book)
+        {
+            ViewBag.BookCreate = book;
+            return View();
+
+        }
+
         // GET: Books/Details/5
         public ActionResult Details(int id)
         {
@@ -59,8 +67,9 @@ namespace SafariBooks.Controllers
         //Azaam: For some reason the UniqueNumber is coming in null, even though it is in the View already
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "UniqueNumber,Title,Price,PublicationDate,SelectedGenres,SelectedArtist")] BookCreateViewModel newBook)
+        public ActionResult Create([Bind(Include = "UniqueNumber,Title,Price,PublicationDate,SelectedGenre,SelectedAuthor")] BookCreateViewModel newBook)
         {
+            //return RedirectToAction("TestView", newBook);
             //add artest based on id
             newBook.Author = db.Authors.FirstOrDefault(a => a.AuthorID == newBook.SelectedAuthor);
             newBook.Genre = db.Genres.FirstOrDefault(a => a.GenreID == newBook.SelectedGenre);
@@ -82,8 +91,6 @@ namespace SafariBooks.Controllers
             //{
             db.Books.Add(bookToAdd);
             db.SaveChanges();
-            return RedirectToAction("Index");
-                
             //}
             //else  //there are validation results so we need to add them to the view model errors
             //{

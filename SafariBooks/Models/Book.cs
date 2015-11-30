@@ -10,6 +10,7 @@ namespace SafariBooks.Models
     {  
         
         [Key]
+        [Required]
         public int UniqueNumber { get; set; }
 
         [Required]

@@ -28,7 +28,9 @@ namespace SafariBooks.Models.ViewModels
             Book book = new Book(bookCreateViewModel.Title, bookCreateViewModel.Genre);
             book.UniqueNumber = bookCreateViewModel.UniqueNumber;
             book.Author = bookCreateViewModel.Author;
+            book.Genre = bookCreateViewModel.Genre;
             book.PublicationDate = bookCreateViewModel.PublicationDate;
+            book.Price = bookCreateViewModel.Price;
             //song.Genres = UpdateGenres.GetGenresFromIntList(songCreateViewModel.SelectedGenres);
             return book;
         }

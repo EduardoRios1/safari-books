@@ -160,13 +160,9 @@ C:\Users\Azaam\Documents\University of Texas Undergrad\Junior Year\MIS333K\safar
 C:\Users\Azaam\Documents\University of Texas Undergrad\Junior Year\MIS333K\safari-books\SafariBooks\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\Azaam\Documents\University of Texas Undergrad\Junior Year\MIS333K\safari-books\SafariBooks\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\Azaam\Documents\University of Texas Undergrad\Junior Year\MIS333K\safari-books\SafariBooks\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\Azaam\Documents\University of Texas Undergrad\Junior Year\MIS333K\safari-books\SafariBooks\obj\Debug\SafariBooks.csprojResolveAssemblyReference.cache
 C:\Users\Azaam\Documents\University of Texas Undergrad\Junior Year\MIS333K\safari-books\SafariBooks\obj\Debug\SafariBooks.dll
 C:\Users\Azaam\Documents\University of Texas Undergrad\Junior Year\MIS333K\safari-books\SafariBooks\obj\Debug\SafariBooks.pdb
-C:\Users\Azaam\Documents\University of Texas Undergrad\Junior Year\MIS333K\safari-books\SafariBooks\obj\Debug\SafariBooks.Migrations.InitialCreate.resources
 C:\Users\Azaam\Documents\University of Texas Undergrad\Junior Year\MIS333K\safari-books\SafariBooks\obj\Debug\SafariBooks.csproj.GenerateResource.Cache
-C:\Users\Azaam\Documents\University of Texas Undergrad\Junior Year\MIS333K\safari-books\SafariBooks\obj\Debug\SafariBooks.Migrations.ChangestotheModels.resources
-C:\Users\Azaam\Documents\University of Texas Undergrad\Junior Year\MIS333K\safari-books\SafariBooks\obj\Debug\SafariBooks.Migrations.ChangeBooksandAuthors.resources
 C:\Users\Eduardo\Documents\GitHub\safari-books\SafariBooks\bin\SafariBooks.dll.config
 C:\Users\Eduardo\Documents\GitHub\safari-books\SafariBooks\bin\SafariBooks.dll
 C:\Users\Eduardo\Documents\GitHub\safari-books\SafariBooks\bin\SafariBooks.pdb
@@ -224,3 +220,5 @@ C:\Users\Eduardo\Documents\GitHub\safari-books\SafariBooks\obj\Debug\SafariBooks
 C:\Users\Eduardo\Documents\GitHub\safari-books\SafariBooks\obj\Debug\SafariBooks.pdb
 C:\Users\Eduardo\Documents\GitHub\safari-books\SafariBooks\obj\Debug\SafariBooks.Migrations.AftermathOfDeletedMigrations.resources
 C:\Users\Eduardo\Documents\GitHub\safari-books\SafariBooks\obj\Debug\SafariBooks.csproj.GenerateResource.Cache
+C:\Users\Azaam\Documents\University of Texas Undergrad\Junior Year\MIS333K\safari-books\SafariBooks\obj\Debug\SafariBooks.Migrations.AftermathOfDeletedMigrations.resources
+C:\Users\Azaam\Documents\University of Texas Undergrad\Junior Year\MIS333K\safari-books\SafariBooks\obj\Debug\SafariBooks.csprojResolveAssemblyReference.cache
